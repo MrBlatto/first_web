@@ -1,12 +1,249 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<h1>Hello_githubs</h1>
-		<h1>Hello_github</h1>
-		
-	</body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三国二十四猛将</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+            color: #ffbc42;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        .card-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto‑fill, minmax(280px, 1fr));
+            gap: 22px;
+        }
+        .card {
+            background: #292929;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            border-color: #ffbc42;
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(255,188,66,0.15);
+        }
+        .avatar{
+            width:100%;
+            height:220px;
+            object-fit: cover;
+            border-radius:8px;
+            margin-bottom:14px;
+            /* 图片加载失败时的占位背景 */
+            background:#3a3a3a;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#999;
+        }
+        .rank-name {
+            display: flex;
+            align-items: center;
+            gap:10px;
+            margin-bottom:10px;
+        }
+        .rank {
+            background-color:#ffbc42;
+            color:#111;
+            width:28px;
+            height:28px;
+            border-radius:50%;
+            text-align:center;
+            line-height:28px;
+            font-weight:bold;
+        }
+        .name {
+            font-size:1.2rem;
+            font-weight:bold;
+            color:#ffdd88;
+        }
+        .force {
+            font-size:0.9rem;
+            color:#ff8866;
+            margin-bottom:12px;
+        }
+        .desc {
+            font-size:0.92rem;
+            line-height:1.6;
+            color:#cccccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>三国二十四猛将</h1>
+    <div class="subtitle">民间三国武力排行 · 一吕二赵三典韦，四关五马六张飞</div>
+    <div class="card-wrap">
+        <div class="card">
+            <img class="avatar" alt="吕布" src="./avatars/lvbu.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>吕布（无图）</div>')">
+            <div class="rank-name"><span class="rank">1</span><span class="name">吕布</span></div>
+            <div class="force">势力：东汉·群雄｜外号：飞将</div>
+            <div class="desc">演义第一猛将，虎牢关三英战吕布，一人独斗刘关张；辕门射戟化解纷争，骁勇无敌，但有勇无谋。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="赵云" src="./avatars/zhaoyun.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>赵云（无图）</div>')">
+            <div class="rank-name"><span class="rank">2</span><span class="name">赵云</span></div>
+            <div class="force">势力：蜀汉｜外号：常山赵子龙</div>
+            <div class="desc">长坂坡七进七出救阿斗，一身是胆。汉水之战威震曹军，征战一生极少败绩，忠勇双全。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="典韦" src="./avatars/dianwei.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>典韦（无图）</div>')">
+            <div class="rank-name"><span class="rank">3</span><span class="name">典韦</span></div>
+            <div class="force">势力：曹魏｜外号：古之恶来</div>
+            <div class="desc">曹操贴身护卫，力大无穷，双铁戟威震敌胆。宛城之战舍命断后，力战而亡，护主牺牲。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="关羽" src="./avatars/guanyu.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>关羽（无图）</div>')">
+            <div class="rank-name"><span class="rank">4</span><span class="name">关羽</span></div>
+            <div class="force">势力：蜀汉｜外号：武圣</div>
+            <div class="desc">青龙偃月刀，温酒斩华雄，过五关斩六将，水淹七军威震华夏。重义重情，后世尊为武圣。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="马超" src="./avatars/machao.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>马超（无图）</div>')">
+            <div class="rank-name"><span class="rank">5</span><span class="name">马超</span></div>
+            <div class="force">势力：蜀汉｜外号：锦马超</div>
+            <div class="desc">西凉猛将，潼关杀得曹操割须弃袍，勇冠西凉。归蜀之后镇守边疆，威慑羌人。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="张飞" src="./avatars/zhangfei.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>张飞（无图）</div>')">
+            <div class="rank-name"><span class="rank">6</span><span class="name">张飞</span></div>
+            <div class="force">势力：蜀汉｜外号：燕人张翼德</div>
+            <div class="desc">声若巨雷，长坂桥一声喝退百万曹军。与吕布多次交手不落下风，性格豪爽暴躁。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="黄忠" src="./avatars/huangzhong.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>黄忠（无图）</div>')">
+            <div class="rank-name"><span class="rank">7</span><span class="name">黄忠</span></div>
+            <div class="force">势力：蜀汉｜外号：老将军</div>
+            <div class="desc">老将神射，长沙大战关羽不分胜负。定军山一战斩杀夏侯渊，老当益壮。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="许褚" src="./avatars/xuchu.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>许褚（无图）</div>')">
+            <div class="rank-name"><span class="rank">8</span><span class="name">许褚</span></div>
+            <div class="force">势力：曹魏｜外号：虎痴</div>
+            <div class="desc">曹操护卫，力能拽牛，裸衣斗马超。勇猛忠诚，多次保护曹操脱离险境。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="孙策" src="./avatars/sunce.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>孙策（无图）</div>')">
+            <div class="rank-name"><span class="rank">9</span><span class="name">孙策</span></div>
+            <div class="force">势力：东吴｜外号：小霸王</div>
+            <div class="desc">江东基业开创者，横扫江东所向披靡，勇武盖世，可惜遇刺英年早逝。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="太史慈" src="./avatars/taishici.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>太史慈（无图）</div>')">
+            <div class="rank-name"><span class="rank">10</span><span class="name">太史慈</span></div>
+            <div class="force">势力：东吴｜外号：神射手</div>
+            <div class="desc">神亭岭大战孙策，武艺高强，弓马娴熟，忠义果敢，东吴顶尖猛将。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="夏侯惇" src="./avatars/xiahoudun.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>夏侯惇（无图）</div>')">
+            <div class="rank-name"><span class="rank">11</span><span class="name">夏侯惇</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">曹魏元勋猛将，拔矢啖睛悍勇无比。一生征战，为曹操镇守后方，军政兼备。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="夏侯渊" src="./avatars/xiahouyuan.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>夏侯渊（无图）</div>')">
+            <div class="rank-name"><span class="rank">12</span><span class="name">夏侯渊</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">擅长千里奔袭，平定西凉诸多叛乱。定军山轻敌，被黄忠突袭斩杀。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="张辽" src="./avatars/zhangliao.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>张辽（无图）</div>')">
+            <div class="rank-name"><span class="rank">13</span><span class="name">张辽</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">威震逍遥津，八百破十万，大败东吴孙权。智勇兼备，东吴小儿闻张辽之名夜不敢啼。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="张郃" src="./avatars/zhanghe.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>张郃（无图）</div>')">
+            <div class="rank-name"><span class="rank">14</span><span class="name">张郃</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">历经多主，用兵巧变。后期成为魏国支柱，多次对抗蜀汉，木门道中箭战死。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="徐晃" src="./avatars/xuhuang.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>徐晃（无图）</div>')">
+            <div class="rank-name"><span class="rank">15</span><span class="name">徐晃</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">曹魏五子良将，治军严整，有周亚夫之风。樊城之战击败关羽。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="庞德" src="./avatars/pangde.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>庞德（无图）</div>')">
+            <div class="rank-name"><span class="rank">16</span><span class="name">庞德</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">原为西凉猛将，抬棺战关羽，大战百余回合不分胜负，被俘不屈殉节。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="甘宁" src="./avatars/ganning.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>甘宁（无图）</div>')">
+            <div class="rank-name"><span class="rank">17</span><span class="name">甘宁</span></div>
+            <div class="force">势力：东吴｜外号：锦帆贼</div>
+            <div class="desc">水战猛将，百骑劫曹营，威震曹军。勇猛豪爽，是东吴数一数二的斗将。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="周泰" src="./avatars/zhoutai.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>周泰（无图）</div>')">
+            <div class="rank-name"><span class="rank">18</span><span class="name">周泰</span></div>
+            <div class="force">势力：东吴</div>
+            <div class="desc">孙权贴身猛将，多次舍命保护孙权，浑身战伤累累，忠勇过人。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="魏延" src="./avatars/weiyan.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>魏延（无图）</div>')">
+            <div class="rank-name"><span class="rank">19</span><span class="name">魏延</span></div>
+            <div class="force">势力：蜀汉</div>
+            <div class="desc">蜀汉后期头号猛将，镇守汉中多年固若金汤。勇猛善战，后期因权力纷争身死。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="张绣" src="./avatars/zhangxiu.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>张绣（无图）</div>')">
+            <div class="rank-name"><span class="rank">20</span><span class="name">张绣</span></div>
+            <div class="force">势力：群雄</div>
+            <div class="desc">宛城霸主，人称北地枪王，偷袭曹军害死典韦、曹昂，后归降曹操。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="文丑" src="./avatars/wenchou.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>文丑（无图）</div>')">
+            <div class="rank-name"><span class="rank">21</span><span class="name">文丑</span></div>
+            <div class="force">势力：袁绍</div>
+            <div class="desc">袁绍河北双雄之一，武艺高强，延津之战被关羽突袭斩杀。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="颜良" src="./avatars/yanliang.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>颜良（无图）</div>')">
+            <div class="rank-name"><span class="rank">22</span><span class="name">颜良</span></div>
+            <div class="force">势力：袁绍</div>
+            <div class="desc">河北名将，勇冠三军，白马之战措手不及被关羽斩杀。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="邓艾" src="./avatars/dengai.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>邓艾（无图）</div>')">
+            <div class="rank-name"><span class="rank">23</span><span class="name">邓艾</span></div>
+            <div class="force">势力：曹魏</div>
+            <div class="desc">文武双全，偷渡阴平，奇袭灭亡蜀汉。后期遭钟会构陷遇害。</div>
+        </div>
+        <div class="card">
+            <img class="avatar" alt="姜维" src="./avatars/jiangwei.jpg" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=avatar>姜维（无图）</div>')">
+            <div class="rank-name"><span class="rank">24</span><span class="name">姜维</span></div>
+            <div class="force">势力：蜀汉</div>
+            <div class="desc">诸葛亮传人，文武兼备，九伐中原。蜀汉灭亡后图谋复国，事败战死。</div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
